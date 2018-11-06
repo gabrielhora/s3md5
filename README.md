@@ -3,13 +3,13 @@
 Calculate MD5 hash for files uploaded (with Multipart Upload API) to Amazon S3 
 compatible services.
 
-## Why?
+### Why?
 
 When using the multipart upload API, Amazon (and other services like Digital Ocean
 Spaces) use a modified MD5 calculation as the ETag of the file. This tool calculate
 that MD5 hash so you can validate the checksum of your downloads or uploads.
 
-## How to use?
+### How to use?
 
 ```bash
 # Usage of s3md5:
@@ -21,19 +21,18 @@ that MD5 hash so you can validate the checksum of your downloads or uploads.
 $ s3cmd -file my_big_file -size 15
 ```
 
-## How it works?
+### How it works?
 
 The algorithm is basically an MD5 of all MD5s of all generated file parts.
 
 
-## Thank you
+### Thank you
 
 This is inspired by https://github.com/antespi/s3md5 which does the same thing 
 (probably better) in bash.
 
-Being a compiled program it does run a bit faster then bash, but the point of 
-this is not to be the fastests possible implementation (the goal was to be as
-simple as possible).
+It does run a bit faster then bash, but the point of this is not to be the
+fastests possible implementation (the goal was to be as simple as possible).
 
 
 ```bash

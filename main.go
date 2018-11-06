@@ -20,6 +20,7 @@ func main() {
 	}
 
 	reader, err := os.Open(*fileName)
+	defer reader.Close()
 	if err != nil {
 		panic(err.Error())
 	}
