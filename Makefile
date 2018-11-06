@@ -1,5 +1,9 @@
+GOOS ?= darwin
+GOARCH ?= amd64
+
+
 default: build
 
 
 build:
-	@go build -ldflags '-w' ./...
+	@GOOS=$(GOOS) GOARCH=$(GOARCH) go build -ldflags '-w' -o s3md5-$(GOOS)-$(GOARCH) ./...
