@@ -31,7 +31,7 @@ The algorithm is basically an MD5 of all MD5s of all generated file parts.
 This is inspired by https://github.com/antespi/s3md5 which does the same thing 
 (probably better) in bash.
 
-It does run a bit faster then bash, but the point of this is not to be the
+It does run a bit faster than bash, but the point of this is not to be the
 fastests possible implementation (the goal was to be as simple as possible).
 
 
